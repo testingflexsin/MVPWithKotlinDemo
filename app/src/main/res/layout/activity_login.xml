@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:fontpath="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/grey"
+    android:orientation="vertical"
+    android:clickable="true"
+    android:focusable="true"
+    android:scrollbars="none"
+    tools:context=".view.activity.LoginActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/backButton"
+            android:layout_width="@dimen/dp_40"
+            android:layout_height="@dimen/dp_40"
+            android:layout_margin="@dimen/dp_16"
+            android:padding="@dimen/dp_10" />
+
+        <com.cudos.mvpwithkotlindemo.view.custom_views.CustomTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="@string/login"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp_35"
+            fontpath:customFont="fonts/ShadedLarch.ttf" />
+
+
+        <com.cudos.mvpwithkotlindemo.view.custom_views.CustomEditText
+            android:id="@+id/email"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_45"
+            android:layout_marginStart="@dimen/dp_30"
+            android:layout_marginTop="@dimen/dp_30"
+            android:layout_marginEnd="@dimen/dp_30"
+            android:background="@drawable/edit_background_selector"
+            android:gravity="center_vertical"
+            android:hint="@string/email"
+            android:inputType="textEmailAddress"
+            android:paddingLeft="@dimen/dp_16"
+            android:paddingRight="@dimen/dp_16"
+            android:textColor="@drawable/edit_text_selector"
+            android:textColorHint="@drawable/edit_text_selector"
+            android:textSize="@dimen/sp_16"
+            fontpath:customFont="fonts/SF-UI-DISPLAY-REGULAR.TTF" />
+
+        <com.cudos.mvpwithkotlindemo.view.custom_views.CustomEditText
+            android:id="@+id/password"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_45"
+            android:layout_marginStart="@dimen/dp_30"
+            android:layout_marginTop="@dimen/dp_30"
+            android:layout_marginEnd="@dimen/dp_30"
+            android:background="@drawable/edit_background_selector"
+            android:gravity="center_vertical"
+            android:hint="@string/password"
+            android:inputType="textEmailAddress"
+            android:paddingLeft="@dimen/dp_16"
+            android:paddingRight="@dimen/dp_16"
+            android:textColor="@drawable/edit_text_selector"
+            android:textColorHint="@drawable/edit_text_selector"
+            android:textSize="@dimen/sp_16"
+            fontpath:customFont="fonts/SF-UI-DISPLAY-REGULAR.TTF" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_45"
+            android:layout_marginEnd="@dimen/dp_30"
+            android:layout_marginStart="@dimen/dp_30"
+            android:layout_marginTop="@dimen/dp_20"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:visibility="gone"
+                android:layout_width="@dimen/dp_50"
+                android:layout_height="@dimen/dp_45"
+                android:background="@drawable/login_left_drawable"
+                android:padding="@dimen/dp_13"
+                android:src="@mipmap/lock_icon" />
+
+            <com.cudos.mvpwithkotlindemo.view.custom_views.CustomButton
+                android:id="@+id/login"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_45"
+                android:layout_gravity="center"
+                android:background="@drawable/yellow_half_round_solid"
+                android:text="@string/login"
+                android:textAllCaps="false"
+                android:textColor="@color/chocolateTextColor"
+                android:textSize="@dimen/sp_15"
+                fontpath:customFont="fonts/SF-UI-DISPLAY-SEMIBOLD.TTF" />
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <ProgressBar
+        android:visibility="gone"
+        android:id="@+id/progress_circular"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_gravity="center" />
+
+</RelativeLayout>
